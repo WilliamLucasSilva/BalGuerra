@@ -11,6 +11,10 @@ export class Card {
         this.flip = false
         this.size = [60, 96]
         this.win = false
+
+        this.back = new Image()
+        this.back.src = '../assets/cardBack.png'
+
     }
     
     draw(ctx) {
@@ -23,9 +27,9 @@ export class Card {
         let [ x, y ] = this.position.actual;
 
     //draw card
-        ctx.fillStyle = 'white';
-        ctx.strokeStyle = 'black';
-        ctx.lineWidth = 1;
+        ctx.fillStyle = 'black';
+        ctx.strokeStyle = '#A23E8C';
+        ctx.lineWidth = 1.8;
         
         ctx.beginPath();
         ctx.roundRect(x, y, width, height, borderRadius);
@@ -36,18 +40,14 @@ export class Card {
 
         if(this.flip){
 
-            ctx.fillStyle = 'black';
+            ctx.fillStyle = '#A23E8C';
             ctx.font = '16px Arial';
-            ctx.textAlign = 'right';
+            ctx.textAlign = 'center';
             ctx.textBaseline = 'top';
-            ctx.fillText(this.id, x + width - 6, y + 6);
+            ctx.fillText(this.id, x + (width / 2), y + (height / 2) - 6);
         }else{
 
-            ctx.fillStyle = 'blue';
-            
-            ctx.beginPath();
-            ctx.roundRect(x + 3, y + 3, width - 6, height - 6, borderRadius);
-            ctx.fill(); // Preenche o retângulo interno azul
+            ctx.drawImage(this.back, x + 3, y + 3, 54, 90)
         }
     }
 }

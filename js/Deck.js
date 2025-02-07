@@ -1,3 +1,4 @@
+import { canvas } from "../main.js";
 import { Card } from "./Card.js";
 
 const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -18,10 +19,10 @@ export class Deck {
         }
 
         function getSpace() {
-            let temp = [], [x, y] = [10, 10];
+            let temp = [], [x, y] = [512 - ((width * 70) / 2), 238 - ((height * 106) / 2)];
 
             for (let i = 0; i < size; i++, x += 70) {
-                if (i % width === 0 && i !== 0) [x, y] = [10, y + 106];
+                if (i % width === 0 && i !== 0) [x, y] = [512 - ((width * 70) / 2), y + 106];
                 temp.push([x, y]);
             }
 

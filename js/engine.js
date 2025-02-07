@@ -20,8 +20,9 @@ export function engineLoop(){
         deck.inGame = decks[0].shuffle(deck.start)
     }
 
-    drawString([240, 240], 'TRIES', ['right', 'center'], 'white')
-    drawString([220, 260], String(tries), ['right', 'center'], 'white')
+    
+    drawString([529, 365], 'TRIES', ['right', 'center'], '#A23E8C')
+    drawString([515, 385], String(tries), ['right', 'center'], '#A23E8C')
 
     if(tries == 0){
         setTimeout(endGame('FAIL'), 200)
