@@ -1,3 +1,112 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0c1724;
+    box-shadow: none;
+
+    margin-bottom: 30px;
+    padding: 20px 0 20px 0;
+
+    animation: headerShadow 5s infinite steps(1);
+}
+
+@keyframes headerShadow {
+        0% {
+            box-shadow: 0px 4px 20px 2px rgb(224 98 197);
+        }
+        11% {
+            box-shadow: none;
+        }
+        13% {
+            box-shadow: 0px 4px 20px 2px rgb(224 98 197);
+        }
+        16% {
+            box-shadow: none;
+        }
+        17% {
+            box-shadow: 0px 4px 20px 2px rgb(224 98 197);
+        }
+        20% {
+            box-shadow: none;
+        }
+        22%, 100% { 
+            box-shadow: 0px 4px 20px 2px rgb(224 98 197);
+        }
+}
+
+h1{
+    font-size: 44px;
+
+    color: #A23E8C;
+    text-shadow: none;
+
+    animation: glitchNeon 5s infinite steps(1);
+}
+
+@keyframes glitchNeon {
+    0% {
+        color: #e062c5;
+        text-shadow: 
+            0 0 8px #A23E8C,   
+            0 0 16px #A23E8C,   
+            0 0 32px #A23E8C,   
+            0 0 64px #e062c5;
+    }
+    11% {
+        color: #A23E8C;
+        text-shadow: none;
+    }
+    13% {
+        color: #e062c5;
+        text-shadow: 
+            0 0 8px #A23E8C,   
+            0 0 16px #A23E8C,   
+            0 0 32px #A23E8C,   
+            0 0 64px #e062c5;
+    }
+    16% {
+        color: #A23E8C;
+        text-shadow: none;
+    }
+    17% {
+        color: #e062c5;
+        text-shadow: 
+            0 0 8px #A23E8C,   
+            0 0 16px #A23E8C,   
+            0 0 32px #A23E8C,   
+            0 0 64px #e062c5;
+    }
+    20% {
+        color: #A23E8C;
+        text-shadow: none;
+    }
+    22%, 100% { 
+        color: #e062c5;
+        text-shadow: 
+            0 0 8px #A23E8C,   
+            0 0 16px #A23E8C,   
+            0 0 32px #A23E8C,   
+            0 0 64px #e062c5;
+    }
+}
+
+
+body{
+    background-color: #272e44;
+}
+    
+
+
 #canvas{
     border: 2px solid black;
     margin: 0 auto;
@@ -5,3 +114,4 @@
 
     background-color: #090A14;
 }
+
